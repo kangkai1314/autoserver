@@ -6,7 +6,7 @@
         <el-button style="float: right; padding: 3px 0" type="text" @click="jump" >登录平台</el-button>
       </div>
       <div>
-        <el-row
+        <el-row>
           <div v-if="item.name==='vue' ">
            <ol>
              <li>加载静态资源例如图片视频 </li>

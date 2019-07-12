@@ -39,8 +39,8 @@ Vue.use(Router)
 const router = new Router({
   routes: [
     {
-      path: '/',
-      redirect: '/dashboard',
+      path: '',
+      redirect: 'dashboard',
       type: 'home',
       name: 'home',
       component: Home,
@@ -205,6 +205,16 @@ const router = new Router({
       ]
     },
     {
+      path: '/login',
+      component: () => import('@/views/admin/login/index'),
+      children: [
+        {
+          path: '/',
+          component: Login
+        }
+      ]
+    },
+    {
       path: '/origin',
       component: index,
       children: [
@@ -277,6 +287,7 @@ const router = new Router({
 
     }
 
-  ]
+  ],
+  scrollBehavior: ({y: 0})
 })
 export default router

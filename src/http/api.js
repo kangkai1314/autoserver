@@ -1,10 +1,11 @@
 const axios = require('axios')
 var fs = require('fs')
 console.log('this is for axios')
-axios.get('http://127.0.0.1:8000/framework/jobs/').then(
-  response => (
-    this.info=response)
-)
+axios.get('http://127.0.0.1:8000/api/jobs/').then(
+  response =>{
+    console.log(response.data)
+  })
+
 function readfiles () {
   var data = 'hello world'
   var writerstream = fs.createWriteStream('a.txt')

@@ -1,35 +1,11 @@
 <template>
-   <el-card class="box-card" >
-     <div slot="header" class="clearfix">
-       <span>模板管理</span>
-
-     </div>
-     <div class="content">
-       <el-container>
-         <el-aside>
-           <el-card class="project-card">
-             <div slot="header" class="clearfix">
-               <span>项目列表</span>
-             </div>
-             <div v-for="o in 4" :key="o" class="text item">
-               {{'列表内容 ' + o }}
-             </div>
-           </el-card>
-         </el-aside>
-         <el-main>
-           <el-card class="template-card">
-             <div slot="header" class="clearfix">
-               <span>项目列表</span>
-             </div>
-             <div v-for="o in 4" :key="o" class="text item">
-               {{'列表内容 ' + o }}
-             </div>
-           </el-card>
-         </el-main>
-       </el-container>
-     </div>
-
-   </el-card>
+   <div style="width: 100%;height: 700px">
+     <h1>你究竟喜欢什么样的东西</h1>
+     <h1>你究竟能做什么样的东西</h1>
+     <h1>你究竟未来想要什么</h1>
+     <h1>现在最重要的事情是什么</h1>
+     <h1>你能做什么样的事情让自己开心</h1>
+   </div>
 </template>
 
 <script>
@@ -39,10 +15,5 @@ export default {
 </script>
 
 <style scoped>
-.box-card{
-  background-color: whitesmoke;
-  width: 1000px;
-  padding-left: 50px;
-  padding-top: 50px;
-}
+
 </style>

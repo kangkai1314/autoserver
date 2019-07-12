@@ -1,23 +1,25 @@
 <template>
   <div class="content">
-    <el-row>
-    <!--头部-->
-    <el-col :span="24">
-      <div><router-view name="top"></router-view></div></el-col>
-    </el-row>
-    <el-row>
-    <el-col :span="4">
-      <router-view name="aside"></router-view>
-    </el-col>
-    <el-col :span="20">
-      <router-view></router-view>
-    </el-col>
-    </el-row>
+    <div class="main-header">
+      <!--头部-->
+      <el-col :span="24">
+        <top-nav></top-nav>
+        </el-col>
+    </div>
+    <div class="main-content" style="width: 500px">
+      <el-card v-for="i in 100" :key="i">
+        <span>this is main content</span>
+      </el-card>
+    </div>
+
+
   </div>
 </template>
 <script>
+import TopNav from "../../components/topNav";
 export default {
   name: 'home',
+  components: {TopNav},
   data () {
     return {
 
@@ -26,10 +28,5 @@ export default {
 
 }
 </script>
-<style>
-  .content{
-    width: 100%;
-    height:100%;
-    text-align: center;
-  }
+<style >
 </style>

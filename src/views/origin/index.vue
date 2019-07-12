@@ -59,10 +59,10 @@
       </el-menu>
 
     </el-col>
-    <el-col :span='1'>
+    <el-col :span="4">
       <router-view name="subleftview"></router-view>
     </el-col>
-    <el-col :span="23">
+    <el-col :span="20">
       <router-view name="subview" ></router-view>
     </el-col>
   </el-row>
