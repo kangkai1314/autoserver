@@ -65,7 +65,6 @@
 
 <script>
 import List from '../origin/project/list'
-import service from '../../../fetch/api'
 export default {
   name: 'Person',
   components: {List},
@@ -94,17 +93,7 @@ export default {
         {id: 2, path: this.$route.fullPath, text: 'person'})
     },
     getInfo: function () {
-      service.get('/jobs/', {auth: {
-        username: 'kangkai',
-        password: '19930304kk'
-      }}).then(response => {
-        console.log(response.data.count)
 
-        this.count = (response.data.count)
-        console.log(response)
-      }).catch(function (error) {
-        console.log(error)
-      })
     }
 
   }

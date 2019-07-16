@@ -39,8 +39,7 @@ Vue.use(Router)
 const router = new Router({
   routes: [
     {
-      path: '',
-      redirect: 'dashboard',
+      path: '/',
       type: 'home',
       name: 'home',
       component: Home,
@@ -74,6 +73,20 @@ const router = new Router({
                 leftnav: left,
                 content: DjangoView
               }
+
+            }
+
+          ]
+        },
+        {
+          path: '/login',
+          name: 'login',
+          component: () => import('@/layout/layout'),
+          children: [
+            {
+              path: '/',
+              name: 'login1',
+              component: () => import('@/views/login/index')
 
             }
 

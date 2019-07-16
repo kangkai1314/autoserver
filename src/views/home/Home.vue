@@ -3,23 +3,21 @@
     <div class="main-header">
       <!--头部-->
       <el-col :span="24">
-        <top-nav></top-nav>
+       <router-view name="top" ></router-view>
         </el-col>
+      <el-col :span="4">
+        <router-view name="leftnav"></router-view>
+      </el-col>
+      <el-col :span="20">
+        <router-view></router-view>
+      </el-col>
     </div>
-    <div class="main-content" style="width: 500px">
-      <el-card v-for="i in 100" :key="i">
-        <span>this is main content</span>
-      </el-card>
-    </div>
-
 
   </div>
 </template>
 <script>
-import TopNav from "../../components/topNav";
 export default {
   name: 'home',
-  components: {TopNav},
   data () {
     return {
 

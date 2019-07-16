@@ -41,7 +41,10 @@
   </div>
 </template>
 <style>
-
+ul{
+  padding-left: 20px;
+  margin-right: 20px;
+}
 </style>
 <script>
 export default {

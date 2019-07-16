@@ -1,5 +1,5 @@
 <template>
-    <router-view></router-view>
+   <p>this is test for login module</p>
 </template>
 
 <script>

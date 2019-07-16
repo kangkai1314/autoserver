@@ -66,7 +66,6 @@
 </template>
 
 <script>
-import service from '../../fetch/api'
 import ContentCard from './ContentCard'
 export default {
   name: 'DjangoView',
@@ -85,15 +84,6 @@ export default {
   },
   beforeCreate () {
     console.log('beforecreated')
-    service.get('/menus/', {auth: {username: 'kangkai', password: '19930304kk'}}).then(response => {
-      console.log(response.data.results)
-      for (var i in response.data.results) {
-        this.menus.push({id: i, text: response.data.results[i].menu_name, index: '/'})
-      }
-    }
-    ).catch(function (error) {
-      console.log(error)
-    })
   },
   mounted: {
     handleScroll: function () {
